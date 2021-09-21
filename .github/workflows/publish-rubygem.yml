@@ -1,0 +1,14 @@
+name: Publish Ruby Gem
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish-rubygem:
+    name: Publish Ruby Gem
+    runs-on: ubuntu-latest
+    environment: Release
+      - uses: actions/checkout@v2
+      - step: echo "Hello, world!"
