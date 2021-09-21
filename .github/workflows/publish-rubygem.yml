@@ -9,5 +9,5 @@ jobs:
   publish-rubygem:
     name: Publish Ruby Gem
     runs-on: ubuntu-latest
-    environment: Release
-      - uses: actions/checkout@v2
+    steps:
+      - run: echo "Hello world!"
