@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: Release
       - uses: actions/checkout@v2
-      - step: echo "Hello, world!"
+        steps:
+          - run: echo "Hello, world!"
