@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
+## [30.0.0]
+
 ## [13.1.2]
 
 Release test
