@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: cucumber/action-get-versions@v1.0.0
+        id: versions
       - name: Create go/* tag
         run: |
-          git tag "go/test-$GITHUB_RUN_NUMBER"
+          git tag "go/test-v${{ steps.versions.outputs.changelog-latest-version }}"
           git push --tags
