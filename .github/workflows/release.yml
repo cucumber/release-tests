@@ -29,7 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: read-version
     steps:
-      - name: Create go/* tag
+      - uses: actions/checkout@v2
+      - name: Create git tag
         run: |
           git tag "go/test-v${{ needs.job1.outputs.version }}"
           git push --tags
