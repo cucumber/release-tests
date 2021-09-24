@@ -14,14 +14,12 @@ on:
     branches: [release/*]
 
 jobs:
-  create-release:
-    name: Create GitHub Release and tag
+  publish-go:
+    name: Create go/* tag
     runs-on: ubuntu-latest
-    environment: Release
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v2
-      - uses: cucumber-actions/create-release@v1.1.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create go/* tag
+        run: |
+          git tag "go/test-$GITHUB_RUN_NUMBER"
+          git push --tags
