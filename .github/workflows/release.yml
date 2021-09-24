@@ -32,5 +32,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create git tag
         run: |
-          git tag "go/test-v${{ needs.job1.outputs.version }}"
+          git tag "go/test-v${{ needs.read-version.outputs.version }}"
           git push --tags
