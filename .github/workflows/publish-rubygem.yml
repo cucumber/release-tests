@@ -1,6 +1,8 @@
 name: Publish Ruby Gem
 
 on:
+  push:
+    branches: [release/*]
   workflow_run:
     workflows: ["Testing"]
     branches: [release/*]
