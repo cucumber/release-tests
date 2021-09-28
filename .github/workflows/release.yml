@@ -19,6 +19,7 @@ on:
 jobs:
   read-version:
     name: Read version to release
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.versions.outputs.changelog-latest-version }}
