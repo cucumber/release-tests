@@ -10,8 +10,11 @@
 name: Release
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Testing"]
     branches: [release/*]
+    types:
+      - completed
 
 jobs:
   read-version:
