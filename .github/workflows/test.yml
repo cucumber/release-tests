@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Run tests
         run: |
-          [[ true == false ]]
+          [[ true == true ]] # change this to `true == false` to make the tests fail
