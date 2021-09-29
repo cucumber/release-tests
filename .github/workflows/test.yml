@@ -2,8 +2,8 @@ name: Test
 
 on:
   push:
-    branches:
-      - !release/*
+    branches-ignore:
+      - release/*
 
 jobs:
   test:
