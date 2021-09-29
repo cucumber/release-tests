@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run tests
-        run: [[ true == false ]]
+        run: |
+          [[ true == false ]]
